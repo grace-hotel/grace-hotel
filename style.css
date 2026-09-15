@@ -169,3 +169,29 @@ footer {
     background: #222;
     color: white;
 }
+/* Rooms side by side */
+.room-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.room-card {
+    width: 45%;
+    box-sizing: border-box;
+}
+
+.room-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Mobile phone */
+@media (max-width: 768px) {
+    .room-card {
+        width: 100%;
+    }
+}

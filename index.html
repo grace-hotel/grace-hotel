@@ -8,7 +8,7 @@
     <title> Grace Hotel</title>
 
     <link rel="stylesheet" href="style.css?v=4">
-</head>2
+</head>
 
 <body>
 
@@ -652,6 +652,21 @@
         </p>
 
     </footer>
+<script>
+const text = "እንኳን ወደ ግሬስ ሆቴል በደህና መጡ";
+const typingText = document.getElementById("typing-text");
 
+let index = 0;
+
+function typeText() {
+    if (index < text.length) {
+        typingText.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeText, 120);
+    }
+}
+
+typeText();
+</script>
 </body>
 </html>

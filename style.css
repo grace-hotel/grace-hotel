@@ -227,3 +227,24 @@ footer {
         background-position: right center;
     }
 }
+.room-card,
+.service-card,
+.gallery-container {
+    overflow: hidden;
+}
+
+.room-card img,
+.service-card img,
+.gallery-container img {
+    animation: imageMove 6s ease-in-out infinite alternate;
+}
+
+@keyframes imageMove {
+    0% {
+        transform: scale(1.08) translateX(-10px);
+    }
+
+    100% {
+        transform: scale(1.08) translateX(10px);
+    }
+}

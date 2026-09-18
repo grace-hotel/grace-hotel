@@ -464,3 +464,19 @@ footer {
         opacity: 1;
     }
 }
+/* ===== WELCOME HERO IMAGE MOVEMENT ===== */
+
+.hero {
+    animation: heroImageMove 8s ease-in-out infinite alternate;
+    background-size: cover;
+}
+
+@keyframes heroImageMove {
+    0% {
+        background-position: 30% center;
+    }
+
+    100% {
+        background-position: 70% center;
+    }
+}

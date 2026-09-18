@@ -357,3 +357,36 @@ footer {
         font-size: 12px;
     }
 }
+/* ===== GALLERY PHOTO FULL WIDTH ON PHONE ===== */
+
+@media (max-width: 768px) {
+
+    .gallery-container {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .gallery-container img {
+        width: 100vw !important;
+        max-width: none !important;
+        height: 230px !important;
+        object-fit: cover !important;
+        display: block;
+        margin-left: calc(50% - 50vw) !important;
+
+        animation: galleryMove 6s ease-in-out infinite alternate;
+    }
+}
+
+/* Gallery photo side-to-side movement */
+
+@keyframes galleryMove {
+    from {
+        transform: scale(1.05) translateX(-10px);
+    }
+
+    to {
+        transform: scale(1.05) translateX(10px);
+    }
+}

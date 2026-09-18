@@ -14,6 +14,7 @@ body {
     font-family: Arial, sans-serif;
     color: #333;
     overflow-x: hidden;
+    letter-spacing: -0.3px;
 }
 
 
@@ -35,10 +36,12 @@ header {
 }
 
 nav a {
-    margin-left: 20px;
+    margin-left: 14px;
     text-decoration: none;
     color: #333;
     font-weight: 500;
+    font-size: 13px;
+    letter-spacing: -0.7px;
 }
 
 nav a:hover {
@@ -50,7 +53,6 @@ nav a:hover {
 
 .hero {
     height: 100vh;
-
     background-image:
         linear-gradient(
             rgba(0,0,0,0.5),
@@ -65,13 +67,13 @@ nav a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-
     text-align: center;
 
     animation: heroMove 12s ease-in-out infinite alternate;
 }
 
 @keyframes heroMove {
+
     0% {
         background-position: left center;
     }
@@ -89,11 +91,13 @@ nav a:hover {
 .hero-text h1 {
     font-size: 45px;
     margin-bottom: 15px;
+    letter-spacing: -1px;
 }
 
 .hero-text p {
     font-size: 20px;
     margin-bottom: 25px;
+    letter-spacing: -0.6px;
 }
 
 
@@ -140,14 +144,16 @@ nav a:hover {
 }
 
 h2 {
-    font-size: 32px;
+    font-size: 30px;
     margin-bottom: 10px;
+    letter-spacing: -1px;
 }
 
 .section-desc {
     color: #666;
     margin-bottom: 40px;
-    line-height: 1.6;
+    line-height: 1.5;
+    letter-spacing: -0.4px;
 }
 
 
@@ -170,7 +176,6 @@ h2 {
     background: white;
     border-radius: 8px;
     overflow: hidden;
-
     width: 280px;
 
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -185,8 +190,10 @@ h2 {
 .room-card img,
 .service-card img,
 .gallery-container .room-card img {
+
     width: 100%;
     height: 230px;
+
     object-fit: cover;
     display: block;
 
@@ -194,6 +201,7 @@ h2 {
 }
 
 @keyframes imageMove {
+
     0% {
         transform: scale(1.05) translateX(-8px);
     }
@@ -216,13 +224,16 @@ h2 {
 .room-info h3 {
     margin-bottom: 10px;
     color: #222;
-    line-height: 1.4;
+    line-height: 1.3;
+    font-size: 18px;
+    letter-spacing: -0.6px;
 }
 
 .room-info p {
     color: #555;
-    font-size: 14px;
-    line-height: 1.6;
+    font-size: 13px;
+    line-height: 1.5;
+    letter-spacing: -0.4px;
 }
 
 
@@ -247,30 +258,33 @@ footer {
 /* ================================================= */
 /* ================= MOBILE ======================== */
 /* ================================================= */
-
 @media (max-width: 768px) {
 
     /* ===== HEADER ===== */
 
     header {
         flex-direction: column;
-        padding: 15px 10px;
-        gap: 12px;
+        padding: 15px 8px;
+        gap: 10px;
     }
 
     .logo {
-        font-size: 22px;
+        font-size: 21px;
     }
+
     nav {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 8px;
+        gap: 4px;
+        width: 100%;
     }
 
     nav a {
         margin-left: 0;
-        font-size: 13px;
+        font-size: 11px;
+        padding: 3px 4px;
+        letter-spacing: -0.8px;
     }
 
 
@@ -282,21 +296,24 @@ footer {
 
     .hero-text {
         width: 100%;
-        padding: 15px;
+        padding: 12px;
     }
 
     .hero-text h1 {
-        font-size: 30px;
-        line-height: 1.3;
+        font-size: 27px;
+        line-height: 1.2;
+        letter-spacing: -1px;
     }
 
     .hero-text p {
-        font-size: 16px;
+        font-size: 15px;
+        line-height: 1.4;
+        letter-spacing: -0.6px;
     }
 
 
     /* ============================================= */
-    /* ===== ROOMS / SERVICES / GALLERY SECTION ==== */
+    /* ===== ROOMS / SERVICES / GALLERY ============ */
     /* ============================================= */
 
     .rooms,
@@ -304,43 +321,49 @@ footer {
     .gallery {
 
         width: 100%;
-
-        /* SECTION ITSELF = EDGE TO EDGE */
         padding-left: 0;
         padding-right: 0;
-        padding-top: 45px;
-        padding-bottom: 45px;
+        padding-top: 40px;
+        padding-bottom: 40px;
 
         text-align: center;
     }
 
 
-    /* ===== SECTION TITLE ===== */
+    /* ===== TITLES ===== */
 
     .rooms > h2,
     .services-section > h2,
     .gallery > h2 {
 
         width: 90%;
-        max-width: 360px;
+        max-width: 350px;
 
         margin-left: auto;
         margin-right: auto;
+
+        font-size: 21px;
+        letter-spacing: -0.9px;
     }
 
 
-    /* ===== SECTION DESCRIPTION ===== */
+    /* ===== DESCRIPTION ===== */
 
     .rooms > .section-desc,
     .services-section > .section-desc,
     .gallery > .section-desc {
 
         width: 90%;
-        max-width: 360px;
+        max-width: 350px;
 
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 30px;
+
+        margin-bottom: 25px;
+
+        font-size: 13px;
+        line-height: 1.5;
+        letter-spacing: -0.5px;
     }
 
 
@@ -362,18 +385,23 @@ footer {
 
     .rooms .room-card {
 
-        width: 90%;
-        max-width: 350px;
+        width: 100%;
+        max-width: 100%;
 
-        margin: 0 auto;
+        margin: 0;
+
+        border-radius: 0;
     }
 
     .rooms .room-card img {
 
-        width: 100%;
+        width: 100vw;
+        max-width: 100vw;
+
         height: 220px;
 
         object-fit: cover;
+        display: block;
     }
 
 
@@ -395,18 +423,23 @@ footer {
 
     .services-section .service-card {
 
-        width: 90%;
-        max-width: 350px;
+        width: 100%;
+        max-width: 100%;
 
-        margin: 0 auto;
+        margin: 0;
+
+        border-radius: 0;
     }
 
     .services-section .service-card img {
 
-        width: 100%;
+        width: 100vw;
+        max-width: 100vw;
+
         height: 220px;
 
         object-fit: cover;
+        display: block;
     }
 
 
@@ -428,57 +461,57 @@ footer {
 
     .gallery-container .room-card {
 
-        width: 90%;
-        max-width: 350px;
+        width: 100%;
+        max-width: 100%;
 
-        margin: 0 auto;
+        margin: 0;
 
-        overflow: visible;
+        overflow: hidden;
+
+        border-radius: 0;
     }
 
-    /* Gallery PHOTO = EDGE TO EDGE */
+
+    /* ===== GALLERY PHOTO EDGE TO EDGE ===== */
 
     .gallery-container .room-card > img {
 
         width: 100vw;
-        max-width: none;
+        max-width: 100vw;
 
         height: 230px;
 
         object-fit: cover;
-
         display: block;
 
-        margin-left: calc(50% - 50vw);
-        margin-right: 0;
+        margin: 0;
 
         border-radius: 0;
 
         animation: galleryMove 6s ease-in-out infinite alternate;
-
-        transform: none;
     }
 
-    /* Gallery photo movement */
+
+    /* ===== GALLERY PHOTO MOVEMENT ===== */
 
     @keyframes galleryMove {
 
         0% {
             object-position: 40% center;
         }
-
-        100% {
+100% {
             object-position: 60% center;
         }
     }
 
-    /* Gallery TEXT = NARROW */
+
+    /* ===== TEXT UNDER PHOTOS ===== */
 
     .gallery-container .room-info {
 
         width: 100%;
 
-        padding: 18px;
+        padding: 15px;
 
         text-align: left;
 
@@ -495,40 +528,53 @@ footer {
 
         width: 100%;
 
-        padding: 18px;
+        padding: 15px;
 
         text-align: left;
     }
+
     .room-info h3 {
-        font-size: 19px;
+
+        font-size: 17px;
+
+        line-height: 1.3;
+
+        letter-spacing: -0.7px;
     }
 
     .room-info p {
-        font-size: 14px;
-        line-height: 1.6;
+
+        font-size: 13px;
+
+        line-height: 1.5;
+
+        letter-spacing: -0.5px;
     }
 
 
     /* ===== ABOUT ===== */
 
     .about {
-        padding: 45px 20px;
+        padding: 40px 15px;
     }
 
 
     /* ===== CONTACT ===== */
 
     .contact {
-        padding: 45px 20px;
+        padding: 40px 15px;
     }
 
 
     /* ===== FOOTER ===== */
 
     footer {
-        padding: 20px 15px;
-        font-size: 14px;
-        line-height: 1.6;
+
+        padding: 18px 12px;
+
+        font-size: 13px;
+
+        line-height: 1.5;
     }
 }
 
@@ -540,11 +586,17 @@ footer {
 @media (max-width: 400px) {
 
     .logo {
-        font-size: 20px;
+        font-size: 19px;
+    }
+
+    nav {
+        gap: 2px;
     }
 
     nav a {
-        font-size: 12px;
+        font-size: 10px;
+        padding: 2px 3px;
+        letter-spacing: -0.9px;
     }
 
     .hero {
@@ -552,107 +604,23 @@ footer {
     }
 
     .hero-text h1 {
-        font-size: 25px;
+        font-size: 24px;
     }
 
     .hero-text p {
-        font-size: 14px;
-    }
-    /* ===== Compact Text ===== */
-body {
-    letter-spacing: -0.3px;
-}
-
-h1, h2, h3, h4, p, a, li, span {
-    letter-spacing: -0.4px;
-}
-
-/* ===== Navigation Text ===== */
-nav a {
-    font-size: 13px;
-    letter-spacing: -0.7px;
-    padding: 4px 5px;
-    margin: 0;
-}
-
-/* ===== Make Sections Full Width ===== */
-section {
-    width: 100%;
-    max-width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-}
-
-/* ===== Photos Full Width ===== */
-img {
-    max-width: 100%;
-}
-
-/* Gallery photos from edge to edge */
-.gallery img {
-    width: 100%;
-    display: block;
-    object-fit: cover;
-}
-
-/* Room photos */
-.room-card img {
-    width: 100%;
-    display: block;
-    object-fit: cover;
-}
-
-/* Service photos */
-.service-card img {
-    width: 100%;
-    display: block;
-    object-fit: cover;
-}
-
-/* ===== Remove Extra Side Space ===== */
-.container {
-    width: 100%;
-    max-width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-}
-
-/* ===== Mobile ===== */
-@media (max-width: 768px) {
-
-    h1 {
-        font-size: 25px;
+        font-size: 13px;
     }
 
     h2 {
-        font-size: 21px;
+        font-size: 20px;
     }
 
-    h3 {
-        font-size: 17px;
-    }
+    .rooms .room-card img,
+    .services-section .service-card img,
+    .gallery-container .room-card > img {
 
-    p {
-        font-size: 14px;
-        line-height: 1.5;
-    }
-
-    nav a {
-        font-size: 11px;
-        padding: 3px 4px;
-        letter-spacing: -0.8px;
-    }
-
-    .gallery img,
-    .room-card img,
-    .service-card img {
         width: 100vw;
         max-width: 100vw;
-        margin-left: 0;
-        margin-right: 0;
+        height: 220px;
     }
 }
-
-
-
-    /* Sections

@@ -7,10 +7,7 @@
 body {
     font-family: Arial, sans-serif;
     color: #333;
-    overflow-x: hidden;
 }
-
-/* ===== HEADER ===== */
 
 header {
     display: flex;
@@ -27,12 +24,6 @@ header {
     color: #222;
 }
 
-nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
 nav a {
     margin-left: 20px;
     text-decoration: none;
@@ -45,34 +36,20 @@ nav a:hover {
     color: #d4a017;
 }
 
-
-/* ===== HERO ===== */
-
 .hero {
-    min-height: 100vh;
-
-    background-image:
-        linear-gradient(
-            rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)
-        ),
-        url("gracehotel.jpg");
-
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("gracehotel.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     text-align: center;
-    padding: 30px 20px;
 }
 
 .hero-text {
     color: white;
-    max-width: 900px;
 }
 
 .hero-text h1 {
@@ -99,17 +76,12 @@ nav a:hover {
     background: #b58711;
 }
 
-
-/* ===== SECTIONS ===== */
-
 .about {
     padding: 60px 20px;
     text-align: center;
 }
 
-.rooms,
-.services-section,
-.gallery {
+.rooms, .services-section, .gallery {
     padding: 60px 50px;
     text-align: center;
 }
@@ -136,12 +108,8 @@ h2 {
     margin-bottom: 40px;
 }
 
-
-/* ===== CONTAINERS ===== */
-
-.room-container,
-.gallery-container,
-.services-container {
+/* Containers Layout */
+.room-container, .gallery-container, .services-container {
     display: flex;
     justify-content: center;
     gap: 25px;
@@ -149,43 +117,28 @@ h2 {
     align-items: stretch;
 }
 
-
-/* ===== ROOM & SERVICE CARDS ===== */
-
-.room-card,
-.service-card {
+/* Room & Gallery Cards Fix */
+.room-card, .service-card {
     background: white;
     border-radius: 8px;
     overflow: hidden;
-
     width: 280px;
-
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-
     transition: transform 0.3s ease;
-
     display: flex;
     flex-direction: column;
 }
 
-.room-card:hover,
-.service-card:hover {
+.room-card:hover, .service-card:hover {
     transform: translateY(-5px);
 }
 
-
-/* ===== CARD IMAGES ===== */
-
-.room-card img,
-.service-card img {
+.room-card img, .service-card img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: 200px !important;
+    object-fit: cover !important;
     display: block;
 }
-
-
-/* ===== ROOM INFO ===== */
 
 .room-info {
     padding: 20px;
@@ -205,27 +158,10 @@ h2 {
     line-height: 1.5;
 }
 
-
-/* ===== GALLERY ===== */
-
-.gallery-container img {
-    width: 280px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    display: block;
-}
-
-
-/* ===== CONTACT ===== */
-
 .contact {
     padding: 60px 20px;
     text-align: center;
 }
-
-
-/* ===== FOOTER ===== */
 
 footer {
     padding: 20px;
@@ -233,129 +169,29 @@ footer {
     background: #222;
     color: white;
 }
-
-
-/* ================================= */
-/* ===== MOBILE PHONE ===== */
-/* ================================= */
-
-@media (max-width: 768px) {
-
-    /* Header */
-
-    header {
-        flex-direction: column;
-        padding: 15px 15px;
-        gap: 12px;
-    }
-
-    .logo {
-        font-size: 22px;
-        text-align: center;
-    }
-
-    nav {
-        width: 100%;
-        gap: 8px;
-    }
-
-    nav a {
-        margin-left: 0;
-        font-size: 13px;
-        padding: 5px;
-    }
-
-
-    /* Hero */
-
-    .hero {
-        min-height: 80vh;
-        padding: 25px 15px;
-    }
-
-    .hero-text h1 {
-        font-size: 32px;
-        line-height: 1.3;
-    }
-
-    .hero-text p {
-        font-size: 17px;
-    }
-
-
-    /* Sections */
-.rooms,
-    .services-section,
-    .gallery {
-        padding: 45px 15px;
-    }
-
-    .about {
-        padding: 45px 15px;
-    }
-
-    h2 {
-        font-size: 27px;
-    }
-
-
-    /* Cards */
-
-    .room-container,
-    .services-container,
-    .gallery-container {
-        width: 100%;
-        gap: 20px;
-    }
-
-    .room-card,
-    .service-card {
-        width: 100%;
-        max-width: 360px;
-    }
-
-
-    /* Images */
-
-    .room-card img,
-    .service-card img {
-        height: 220px;
-    }
-
-    .gallery-container img {
-        width: 100%;
-        max-width: 360px;
-        height: 220px;
-    }
-
-
-    /* Footer */
-
-    footer {
-        padding: 25px 15px;
-        font-size: 14px;
-    }
+/* Rooms side by side */
+.room-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
 }
 
+.room-card {
+    width: 45%;
+    box-sizing: border-box;
+}
 
-/* ===== SMALL PHONES ===== */
+.room-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
 
-@media (max-width: 400px) {
-
-    .hero-text h1 {
-        font-size: 27px;
-    }
-
-    .hero-text p {
-        font-size: 15px;
-    }
-
-    nav a {
-        font-size: 12px;
-    }
-
-    .room-card,
-    .service-card {
-        max-width: 100%;
+/* Mobile phone */
+@media (max-width: 768px) {
+    .room-card {
+        width: 100%;
     }
 }

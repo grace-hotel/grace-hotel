@@ -248,3 +248,18 @@ footer {
         transform: scale(1.08) translateX(10px);
     }
 }
+/* ===== Photo full width on mobile ===== */
+
+@media (max-width: 768px) {
+
+    .room-card img,
+    .service-card img {
+        width: 100vw;
+        max-width: none;
+        margin-left: calc(50% - 50vw);
+        height: 230px;
+        object-fit: cover;
+        display: block;
+    }
+
+}

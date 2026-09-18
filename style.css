@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     color: #333;
@@ -38,7 +42,6 @@ nav a {
 nav a:hover {
     color: #d4a017;
 }
-
 
 /* ===== HERO ===== */
 
@@ -87,7 +90,6 @@ nav a:hover {
     margin-bottom: 25px;
 }
 
-
 /* ===== BUTTON ===== */
 
 .btn {
@@ -103,7 +105,6 @@ nav a:hover {
 .btn:hover {
     background: #b58711;
 }
-
 
 /* ===== SECTIONS ===== */
 
@@ -141,7 +142,6 @@ h2 {
     margin-bottom: 40px;
 }
 
-
 /* ===== CONTAINERS ===== */
 
 .room-container,
@@ -154,7 +154,6 @@ h2 {
     align-items: stretch;
 }
 
-
 /* ===== CARDS ===== */
 
 .room-card,
@@ -163,9 +162,7 @@ h2 {
     border-radius: 8px;
     overflow: hidden;
     width: 280px;
-
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-
     transition: transform 0.3s ease;
 
     display: flex;
@@ -177,8 +174,7 @@ h2 {
     transform: translateY(-5px);
 }
 
-
-/* ===== ROOM IMAGES ===== */
+/* ===== ROOM & SERVICE IMAGES ===== */
 
 .room-card img,
 .service-card img {
@@ -186,13 +182,7 @@ h2 {
     height: 200px;
     object-fit: cover;
     display: block;
-}
 
-
-/* ===== IMAGE MOVEMENT ===== */
-
-.room-card img,
-.service-card img {
     animation: imageMove 6s ease-in-out infinite alternate;
 }
 
@@ -205,7 +195,6 @@ h2 {
         transform: scale(1.05) translateX(10px);
     }
 }
-
 
 /* ===== ROOM INFO ===== */
 
@@ -227,14 +216,12 @@ h2 {
     line-height: 1.5;
 }
 
-
 /* ===== CONTACT ===== */
 
 .contact {
     padding: 60px 20px;
     text-align: center;
 }
-
 
 /* ===== FOOTER ===== */
 
@@ -245,15 +232,7 @@ footer {
     color: white;
 }
 
-
 /* ===== ROOMS ===== */
-
-.room-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-    justify-content: center;
-}
 
 .room-card {
     width: 45%;
@@ -266,12 +245,24 @@ footer {
     display: block;
 }
 
+/* ===== GALLERY ===== */
 
-/* ================================= */
+.gallery-container .room-card {
+    width: 280px;
+}
+
+.gallery-container .room-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
 /* ===== MOBILE PHONE ===== */
-/* ================================= */
 
 @media (max-width: 768px) {
+
+    /* HEADER */
 
     header {
         flex-direction: column;
@@ -290,6 +281,8 @@ footer {
         font-size: 13px;
     }
 
+    /* HERO */
+
     .hero {
         height: 80vh;
     }
@@ -302,44 +295,99 @@ footer {
         font-size: 17px;
     }
 
+    /* SECTIONS */
+
     .rooms,
-    .services-section,
-    .gallery {
-        padding: 45px 50px;
+    .services-section {
+        padding: 45px 20px;
     }
+
+    .gallery {
+        padding: 45px 20px;
+    }
+
+    /* ROOM & SERVICE CARDS */
 
     .room-card,
     .service-card {
         width: 100%;
     }
 
-
-    /* ===== PHOTO ONLY: EDGE TO EDGE ===== */
-
-    .room-card,
-    .service-card {
-        overflow: visible;
-    }
+    /* ROOM & SERVICE PHOTOS */
 
     .room-card img,
     .service-card img {
-        width: 100vw !important;
-        max-width: none !important;
-
-        margin-left: calc(50% - 50vw) !important;
-
-        height: 230px !important;
-
-        object-fit: cover !important;
-        display: block;
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
     }
+
+    /* ROOM TEXT */
 
     .room-info {
-        background: white;
         padding: 20px;
+        background: white;
+    }
+
+    /* ========================= */
+    /* GALLERY MOBILE */
+    /* ========================= */
+
+    /* Gallery title and description stay normal */
+    .gallery > h2,
+    .gallery > .section-desc {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* Gallery container */
+    .gallery-container {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Gallery card */
+    .gallery-container .room-card {
+        width: 100%;
+        margin: 0 0 25px 0;
+        padding: 0;
+        border-radius: 0;
+        overflow: visible;
+        box-shadow: none;
+    }
+
+    /* ===== GALLERY PHOTO ONLY ===== */
+
+    .gallery-container .room-card > img {
+        width: calc(100% + 40px);
+        max-width: none;
+
+        height: 230px;
+
+        object-fit: cover;
+        display: block;
+
+        margin-left: -20px;
+        margin-right: -20px;
+        margin-bottom: 0;
+
+        border-radius: 0;
+
+        animation: imageMove 6s ease-in-out infinite alternate;
+    }
+
+    /* ===== GALLERY TEXT ===== */
+
+    .gallery-container .room-card .room-info {
+        width: 100%;
+        margin: 0;
+        padding: 20px 0;
+        background: white;
+        text-align: left;
     }
 }
-
 
 /* ===== SMALL PHONES ===== */
 
@@ -356,48 +404,8 @@ footer {
     nav a {
         font-size: 12px;
     }
-}
-@media (max-width: 768px) {
 
-    /* Gallery title + description */
-    .gallery > h2,
-    .gallery > .section-desc {
-        margin-left: 20px !important;
-        margin-right: 20px !important;
-    }
-
-    /* Gallery cards */
-    .gallery .gallery-container {
-        display: block !important;
-        width: 100% !important;
-        padding: 0 !important;
-        margin: 0 !important;
-    }
-
-    .gallery .gallery-container .room-card {
-        width: 100% !important;
-        margin: 0 0 25px 0 !important;
-        padding: 0 !important;
-        border-radius: 0 !important;
-        overflow: hidden !important;
-    }
-
-    /* PHOTO ONLY */
-    .gallery .gallery-container .room-card > img {
-        width: 100% !important;
-        height: 230px !important;
-        object-fit: cover !important;
-        display: block !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        border-radius: 0 !important;
-    }
-
-    /* TEXT */
-    .gallery .gallery-container .room-card .room-info {
-        margin: 0 !important;
-        padding: 20px !important;
-        text-align: left !important;
-        width: 100% !important;
+    .gallery-container .room-card > img {
+        height: 210px;
     }
 }

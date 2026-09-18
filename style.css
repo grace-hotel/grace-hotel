@@ -359,75 +359,45 @@ footer {
 }
 @media (max-width: 768px) {
 
-    /* Gallery itself stays normal */
-    .gallery {
-        padding-left: 20px !important;
-        padding-right: 20px !important;
-    }
-
-    /* Title and description stay normal */
-    .gallery h2,
-    .gallery .section-desc {
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-    }
-
-    /* Photos only go edge-to-edge */
-    .gallery-container {
-        margin-left: -20px !important;
-        margin-right: -20px !important;
-        width: calc(100% + 40px) !important;
-    }
-
-    .gallery-container img {
-        width: 100% !important;
-        max-width: none !important;
-        height: 230px !important;
-        object-fit: cover !important;
-        display: block !important;
-        margin: 0 0 15px 0 !important;
-        border-radius: 0 !important;
-    }
-}
-@media (max-width: 768px) {
-
-    /* Gallery title and description stay normal */
-    .gallery h2,
-    .gallery .section-desc {
+    /* Gallery title + description */
+    .gallery > h2,
+    .gallery > .section-desc {
         margin-left: 20px !important;
         margin-right: 20px !important;
     }
 
-    /* Gallery container */
-    .gallery-container {
+    /* Gallery cards */
+    .gallery .gallery-container {
         display: block !important;
-        margin: 0 !important;
+        width: 100% !important;
         padding: 0 !important;
+        margin: 0 !important;
     }
 
-    /* Gallery card */
-    .gallery-container .room-card {
-        width: 100vw !important;
-        max-width: none !important;
-        margin-left: calc(50% - 50vw) !important;
-        margin-right: 0 !important;
+    .gallery .gallery-container .room-card {
+        width: 100% !important;
+        margin: 0 0 25px 0 !important;
+        padding: 0 !important;
         border-radius: 0 !important;
+        overflow: hidden !important;
     }
 
-    /* PHOTO ONLY = edge to edge */
-    .gallery-container .room-card img {
-        width: 100vw !important;
-        max-width: none !important;
+    /* PHOTO ONLY */
+    .gallery .gallery-container .room-card > img {
+        width: 100% !important;
         height: 230px !important;
         object-fit: cover !important;
         display: block !important;
         margin: 0 !important;
+        padding: 0 !important;
         border-radius: 0 !important;
     }
 
-    /* Text stays inside the normal area */
-    .gallery-container .room-info {
+    /* TEXT */
+    .gallery .gallery-container .room-card .room-info {
+        margin: 0 !important;
         padding: 20px !important;
         text-align: left !important;
+        width: 100% !important;
     }
 }

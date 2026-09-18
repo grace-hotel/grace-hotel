@@ -357,3 +357,54 @@ footer {
         font-size: 12px;
     }
 }
+/* ===== TYPING ANIMATION ===== */
+
+.typing-text {
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid white;
+
+    animation:
+        typing 5s steps(35, end) forwards,
+        blink 0.7s step-end infinite;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+@media (max-width: 768px) {
+    .typing-text {
+        font-size: 25px;
+        white-space: normal;
+        width: 100%;
+        animation: fadeTyping 3s ease-in-out;
+    }
+
+    @keyframes fadeTyping {
+        from {
+            opacity: 0;
+            transform: translateY(15px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}

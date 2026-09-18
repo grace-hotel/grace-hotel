@@ -558,6 +558,101 @@ footer {
     .hero-text p {
         font-size: 14px;
     }
+    /* ===== Compact Text ===== */
+body {
+    letter-spacing: -0.3px;
+}
+
+h1, h2, h3, h4, p, a, li, span {
+    letter-spacing: -0.4px;
+}
+
+/* ===== Navigation Text ===== */
+nav a {
+    font-size: 13px;
+    letter-spacing: -0.7px;
+    padding: 4px 5px;
+    margin: 0;
+}
+
+/* ===== Make Sections Full Width ===== */
+section {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* ===== Photos Full Width ===== */
+img {
+    max-width: 100%;
+}
+
+/* Gallery photos from edge to edge */
+.gallery img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Room photos */
+.room-card img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Service photos */
+.service-card img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* ===== Remove Extra Side Space ===== */
+.container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    h3 {
+        font-size: 17px;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    nav a {
+        font-size: 11px;
+        padding: 3px 4px;
+        letter-spacing: -0.8px;
+    }
+
+    .gallery img,
+    .room-card img,
+    .service-card img {
+        width: 100vw;
+        max-width: 100vw;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
 
 
     /* Sections

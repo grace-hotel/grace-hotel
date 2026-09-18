@@ -400,3 +400,67 @@ footer {
         border-color: transparent;
     }
 }
+/* ===== PAGE LOAD ANIMATION ===== */
+
+header {
+    animation: slideDown 0.8s ease-out;
+}
+
+.hero {
+    animation: fadeIn 1.2s ease-out;
+}
+
+.about {
+    animation: slideUp 1s ease-out;
+}
+
+.rooms {
+    animation: slideUp 1.2s ease-out;
+}
+
+.services-section {
+    animation: slideUp 1.4s ease-out;
+}
+
+.gallery {
+    animation: slideUp 1.6s ease-out;
+}
+
+.contact {
+    animation: slideUp 1.8s ease-out;
+}
+
+footer {
+    animation: slideUp 2s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

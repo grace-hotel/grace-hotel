@@ -388,23 +388,15 @@ footer {
         border-color: transparent;
     }
 }
-@media (max-width: 768px) {
-    .typing-text {
-        font-size: 25px;
-        white-space: normal;
-        width: 100%;
-        animation: fadeTyping 3s ease-in-out;
-    }
+#typing-text {
+    border-right: 3px solid white;
+    display: inline-block;
+    padding-right: 5px;
+    animation: cursorBlink 0.7s infinite;
+}
 
-    @keyframes fadeTyping {
-        from {
-            opacity: 0;
-            transform: translateY(15px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+@keyframes cursorBlink {
+    50% {
+        border-color: transparent;
     }
 }

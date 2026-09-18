@@ -464,21 +464,3 @@ footer {
         opacity: 1;
     }
 }
-/* ===== FULL WEBSITE OPEN ANIMATION ===== */
-
-body {
-    animation: websiteOpen 1.5s ease-out;
-    transform-origin: top center;
-}
-
-@keyframes websiteOpen {
-    from {
-        opacity: 0;
-        transform: scaleY(0);
-    }
-
-    to {
-        opacity: 1;
-        transform: scaleY(1);
-    }
-}

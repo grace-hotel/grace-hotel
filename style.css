@@ -1,4 +1,5 @@
-/* ===== RESET ===== */
+/* ================= RESET ================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -15,14 +16,16 @@ body {
     overflow-x: hidden;
 }
 
-/* ===== HEADER ===== */
+
+/* ================= HEADER ================= */
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
     background: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .logo {
@@ -36,20 +39,22 @@ nav a {
     text-decoration: none;
     color: #333;
     font-weight: 500;
-    transition: color 0.3s;
 }
 
 nav a:hover {
     color: #d4a017;
 }
 
-/* ===== HERO ===== */
+
+/* ================= HERO ================= */
+
 .hero {
     height: 100vh;
+
     background-image:
         linear-gradient(
-            rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
         ),
         url("gracehotel.jpg");
 
@@ -60,12 +65,13 @@ nav a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+
     text-align: center;
 
-    animation: moveSideToSide 12s ease-in-out infinite alternate;
+    animation: heroMove 12s ease-in-out infinite alternate;
 }
 
-@keyframes moveSideToSide {
+@keyframes heroMove {
     0% {
         background-position: left center;
     }
@@ -90,7 +96,9 @@ nav a:hover {
     margin-bottom: 25px;
 }
 
-/* ===== BUTTON ===== */
+
+/* ================= BUTTON ================= */
+
 .btn {
     background: #d4a017;
     color: white;
@@ -98,14 +106,15 @@ nav a:hover {
     text-decoration: none;
     border-radius: 5px;
     display: inline-block;
-    transition: background 0.3s;
 }
 
 .btn:hover {
     background: #b58711;
 }
 
-/* ===== SECTIONS ===== */
+
+/* ================= SECTIONS ================= */
+
 .about {
     padding: 60px 20px;
     text-align: center;
@@ -123,7 +132,7 @@ nav a:hover {
 }
 
 .services-section {
-    background: #fff;
+    background: white;
 }
 
 .gallery {
@@ -141,43 +150,43 @@ h2 {
     line-height: 1.6;
 }
 
-/* ===== CONTAINERS ===== */
+
+/* ================= CONTAINERS ================= */
+
 .room-container,
-.gallery-container,
-.services-container {
+.services-container,
+.gallery-container {
     display: flex;
     justify-content: center;
     gap: 25px;
     flex-wrap: wrap;
-    align-items: stretch;
 }
 
-/* ===== ROOM & SERVICE CARDS ===== */
+
+/* ================= CARDS ================= */
+
 .room-card,
 .service-card {
     background: white;
     border-radius: 8px;
     overflow: hidden;
+
     width: 280px;
 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 
     display: flex;
     flex-direction: column;
 }
 
-.room-card:hover,
-.service-card:hover {
-    transform: translateY(-5px);
-}
 
-/* ===== ROOM & SERVICE IMAGES ===== */
+/* ================= IMAGES ================= */
+
 .room-card img,
-.service-card img {
+.service-card img,
+.gallery-container .room-card img {
     width: 100%;
-    height: 200px;
+    height: 230px;
     object-fit: cover;
     display: block;
 
@@ -194,7 +203,9 @@ h2 {
     }
 }
 
-/* ===== ROOM INFO ===== */
+
+/* ================= TEXT ================= */
+
 .room-info {
     padding: 20px;
     text-align: left;
@@ -214,25 +225,17 @@ h2 {
     line-height: 1.6;
 }
 
-/* ===== GALLERY ===== */
-.gallery-container .room-card {
-    width: 280px;
-}
 
-.gallery-container .room-card img {
-    width: 100%;
-    height: 230px;
-    object-fit: cover;
-    display: block;
-}
+/* ================= CONTACT ================= */
 
-/* ===== CONTACT ===== */
 .contact {
     padding: 60px 20px;
     text-align: center;
 }
 
-/* ===== FOOTER ===== */
+
+/* ================= FOOTER ================= */
+
 footer {
     padding: 20px;
     text-align: center;
@@ -240,12 +243,15 @@ footer {
     color: white;
 }
 
+
 /* ================================================= */
 /* ================= MOBILE ======================== */
 /* ================================================= */
 
 @media (max-width: 768px) {
+
     /* ===== HEADER ===== */
+
     header {
         flex-direction: column;
         padding: 15px 10px;
@@ -255,7 +261,6 @@ footer {
     .logo {
         font-size: 22px;
     }
-
     nav {
         display: flex;
         flex-wrap: wrap;
@@ -268,10 +273,11 @@ footer {
         font-size: 13px;
     }
 
+
     /* ===== HERO ===== */
+
     .hero {
         height: 80vh;
-        background-position: center;
     }
 
     .hero-text {
@@ -286,132 +292,239 @@ footer {
 
     .hero-text p {
         font-size: 16px;
-        line-height: 1.5;
     }
 
-    /* ===== SECTIONS ===== */
-    .about,
+
+    /* ============================================= */
+    /* ===== ROOMS / SERVICES / GALLERY SECTION ==== */
+    /* ============================================= */
+
     .rooms,
     .services-section,
-    .gallery,
-    .contact {
-        padding: 45px 20px;
+    .gallery {
+
+        width: 100%;
+
+        /* SECTION ITSELF = EDGE TO EDGE */
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 45px;
+        padding-bottom: 45px;
+
+        text-align: center;
     }
 
-    h2 {
-        font-size: 27px;
-        line-height: 1.4;
+
+    /* ===== SECTION TITLE ===== */
+
+    .rooms > h2,
+    .services-section > h2,
+    .gallery > h2 {
+
+        width: 90%;
+        max-width: 360px;
+
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .section-desc {
-        font-size: 15px;
+
+    /* ===== SECTION DESCRIPTION ===== */
+
+    .rooms > .section-desc,
+    .services-section > .section-desc,
+    .gallery > .section-desc {
+
+        width: 90%;
+        max-width: 360px;
+
+        margin-left: auto;
+        margin-right: auto;
         margin-bottom: 30px;
     }
 
-    /* ===== ROOMS ===== */
+
+    /* ============================================= */
+    /* ================= ROOMS ====================== */
+    /* ============================================= */
+
     .room-container {
+
         width: 100%;
+
         display: flex;
         flex-direction: column;
+
         align-items: center;
+
         gap: 25px;
     }
 
     .rooms .room-card {
-        width: 92%;
-        max-width: 360px;
+
+        width: 90%;
+        max-width: 350px;
+
+        margin: 0 auto;
     }
 
     .rooms .room-card img {
+
         width: 100%;
-        height: 230px;
+        height: 220px;
+
         object-fit: cover;
     }
 
-    /* ===== SERVICES ===== */
+
+    /* ============================================= */
+    /* ================= SERVICES =================== */
+    /* ============================================= */
+
     .services-container {
+
         width: 100%;
+
         display: flex;
         flex-direction: column;
+
         align-items: center;
+
         gap: 25px;
     }
 
     .services-section .service-card {
-        width: 92%;
-        max-width: 360px;
+
+        width: 90%;
+        max-width: 350px;
+
+        margin: 0 auto;
     }
 
     .services-section .service-card img {
+
         width: 100%;
-        height: 230px;
+        height: 220px;
+
         object-fit: cover;
     }
 
-    /* ===== ROOM / SERVICE TEXT ===== */
-    .room-info {
-        width: 100%;
-        padding: 18px;
-        text-align: left;
-    }
 
-    .room-info h3 {
-        font-size: 20px;
-    }
+    /* ============================================= */
+    /* ================= GALLERY ==================== */
+    /* ============================================= */
 
-    .room-info p {
-        font-size: 15px;
-        line-height: 1.6;
-    }
-
-    /* ===== GALLERY ===== */
     .gallery-container {
+
         width: 100%;
+
         display: flex;
         flex-direction: column;
+
         align-items: center;
+
         gap: 25px;
     }
 
     .gallery-container .room-card {
-        width: 92%;
-        max-width: 360px;
-        margin: 0;
+
+        width: 90%;
+        max-width: 350px;
+
+        margin: 0 auto;
+
+        overflow: visible;
     }
 
-    /* Gallery photo */
-    .gallery-container .room-card img {
-        width: 100%;
-        height: 230px;
-        object-fit: cover;
-        display: block;
-        margin: 0;
+    /* Gallery PHOTO = EDGE TO EDGE */
 
-        /* keep photo inside the card */
+    .gallery-container .room-card > img {
+
+        width: 100vw;
+        max-width: none;
+
+        height: 230px;
+
+        object-fit: cover;
+
+        display: block;
+
+        margin-left: calc(50% - 50vw);
+        margin-right: 0;
+
         border-radius: 0;
 
-        animation: imageMove 6s ease-in-out infinite alternate;
+        animation: galleryMove 6s ease-in-out infinite alternate;
+
+        transform: none;
     }
 
-    /* Gallery text stays same width as card */
+    /* Gallery photo movement */
+
+    @keyframes galleryMove {
+
+        0% {
+            object-position: 40% center;
+        }
+
+        100% {
+            object-position: 60% center;
+        }
+    }
+
+    /* Gallery TEXT = NARROW */
+
     .gallery-container .room-info {
+
         width: 100%;
+
         padding: 18px;
+
+        text-align: left;
+
         background: white;
+    }
+
+
+    /* ============================================= */
+    /* ================= ROOM TEXT ================== */
+    /* ============================================= */
+
+    .rooms .room-info,
+    .services-section .room-info {
+
+        width: 100%;
+
+        padding: 18px;
+
         text-align: left;
     }
+    .room-info h3 {
+        font-size: 19px;
+    }
+
+    .room-info p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
 
     /* ===== ABOUT ===== */
+
     .about {
         padding: 45px 20px;
     }
 
+
     /* ===== CONTACT ===== */
+
     .contact {
         padding: 45px 20px;
     }
 
+
     /* ===== FOOTER ===== */
+
     footer {
         padding: 20px 15px;
         font-size: 14px;
@@ -419,8 +532,9 @@ footer {
     }
 }
 
+
 /* ================================================= */
-/* ================= SMALL PHONES ================= */
+/* ================= SMALL PHONE =================== */
 /* ================================================= */
 
 @media (max-width: 400px) {
@@ -445,34 +559,5 @@ footer {
         font-size: 14px;
     }
 
-    .rooms,
-    .services-section,
-    .gallery {
-        padding: 40px 15px;
-    }
 
-    .rooms .room-card,
-    .services-section .service-card,
-    .gallery-container .room-card {
-        width: 94%;
-        max-width: 350px;
-    }
-
-    .rooms .room-card img,
-    .services-section .service-card img,
-    .gallery-container .room-card img {
-        height: 210px;
-    }
-
-    .room-info {
-        padding: 16px;
-    }
-
-    .room-info h3 {
-        font-size: 18px;
-    }
-
-    .room-info p {
-        font-size: 14px;
-    }
-}
+    /* Sections

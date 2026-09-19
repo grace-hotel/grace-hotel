@@ -50,7 +50,69 @@ nav a:hover {
             rgba(0, 0, 0, 0.5)
         ),
         url("gracehotel.jpg");
+/* ===== HERO ===== */
 
+.hero {
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: heroBackground 15s infinite;
+}
+
+/* Hero image movement */
+@keyframes heroBackground {
+
+    0% {
+        background-image:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url("gracehotel.jpg");
+        background-position: center;
+    }
+
+    25% {
+        background-position: 55% center;
+    }
+
+    50% {
+        background-position: 100% center;
+    }
+
+    75% {
+        background-position: 45% center;
+    }
+
+    100% {
+        background-position: center;
+    }
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes heroSlideshow {
+
+    0%, 30% {
+        background-image:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url("gracehotel.jpg");
+    }
+
+    33%, 63% {
+        background-image:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url("gracet.jpg");
+    }
+
+    66%, 100% {
+        background-image:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url("food.jpg");
+    }
+}
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

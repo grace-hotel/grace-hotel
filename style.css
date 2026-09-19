@@ -891,3 +891,83 @@ footer p {
         line-height: 1.5 !important;
     }
 }
+/* ================= TEXT SIZE ================= */
+
+/* Navigation */
+nav a {
+    font-size: 16px !important;
+}
+
+/* Section titles */
+h2 {
+    font-size: 30px !important;
+}
+
+/* Room and food/service titles */
+.room-info h3 {
+    font-size: 19px !important;
+}
+
+/* Room and food/service descriptions */
+.room-info p {
+    font-size: 13px !important;
+    line-height: 1.7 !important;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    nav a {
+        font-size: 14px !important;
+    }
+
+    h2 {
+        font-size: 27px !important;
+    }
+
+    .room-info {
+        width: 50% !important;
+        max-width: 50% !important;
+    }
+
+    .room-info h3 {
+        font-size: 18px !important;
+    }
+
+    .room-info p {
+        font-size: 12.5px !important;
+    }
+}
+/* ================= GALLERY MOVEMENT ONLY ================= */
+
+.gallery-grid img {
+    animation: galleryMove 7s ease-in-out infinite alternate;
+    transform-origin: center center;
+}
+
+@keyframes galleryMove {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.04);
+    }
+
+    100% {
+        transform: scale(1.08);
+    }
+}
+
+/* Welcome Hero - NO movement */
+.hero {
+    animation: heroSlideshow 15s infinite !important;
+    background-size: cover !important;
+}
+
+/* Rooms and Services - NO movement */
+.room-card img,
+.service-card img {
+    animation: none !important;
+    transform: none !important;
+}

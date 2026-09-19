@@ -366,8 +366,8 @@ footer {
     border-right: 3px solid white;
 
     animation:
-        typing 5s steps(35, end) forwards,
-        blink 0.7s step-end infinite;
+        typing 7s steps(35, end) forwards,
+        blink 1.5s step-end infinite;
 
     margin-left: auto;
     margin-right: auto;

@@ -731,3 +731,163 @@ footer p {
         height: 145px;
     }
 }
+/* =========================================
+   CINEMATIC MOVEMENT - ALL PHOTOS
+   ========================================= */
+
+/* HERO / WELCOME PHOTO */
+.hero {
+    overflow: hidden;
+    animation:
+        heroSlideshow 15s infinite,
+        heroCinematic 15s ease-in-out infinite alternate;
+    background-size: 110% 110%;
+}
+
+@keyframes heroCinematic {
+    0% {
+        background-size: 100% 100%;
+        background-position: center center;
+    }
+
+    50% {
+        background-size: 110% 110%;
+        background-position: 55% 48%;
+    }
+
+    100% {
+        background-size: 120% 120%;
+        background-position: 45% 52%;
+    }
+}
+
+
+/* ROOMS + SERVICES */
+.room-card img,
+.service-card img {
+    animation: cardCinematic 8s ease-in-out infinite alternate;
+    transform-origin: center center;
+}
+
+@keyframes cardCinematic {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1.10);
+    }
+}
+
+
+/* GALLERY */
+.gallery-grid img {
+    animation: galleryCinematic 7s ease-in-out infinite alternate;
+    transform-origin: center center;
+}
+
+@keyframes galleryCinematic {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.04);
+    }
+
+    100% {
+        transform: scale(1.08);
+    }
+}
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .hero {
+        background-size: 110% 110%;
+    }
+
+    .room-card img,
+    .service-card img {
+        animation: cardCinematicMobile 8s ease-in-out infinite alternate;
+    }
+
+    @keyframes cardCinematicMobile {
+        0% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.06);
+        }
+
+        100% {
+            transform: scale(1.11);
+        }
+    }
+
+    .gallery-grid img {
+        animation: galleryCinematicMobile 7s ease-in-out infinite alternate;
+    }
+
+    @keyframes galleryCinematicMobile {
+        0% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.05);
+        }
+
+        100% {
+            transform: scale(1.09);
+        }
+    }
+}
+/* ================= PHOTO 100% / TEXT 50% ================= */
+
+@media (max-width: 768px) {
+
+    /* PHOTO — 100% */
+    .room-card,
+    .service-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        border-radius: 0 !important;
+    }
+
+    .room-card img,
+    .service-card img {
+        width: 100% !important;
+        height: 240px !important;
+        display: block !important;
+        object-fit: cover !important;
+    }
+
+    /* TEXT — 50%, CENTER */
+    .room-info {
+        width: 50% !important;
+        max-width: 50% !important;
+        margin: 0 auto !important;
+        padding: 15px 8px 20px !important;
+        text-align: center !important;
+    }
+
+    .room-info h3 {
+        font-size: 16px !important;
+        line-height: 1.4 !important;
+        margin-bottom: 8px !important;
+    }
+
+    .room-info p {
+        font-size: 11px !important;
+        line-height: 1.5 !important;
+    }
+}

@@ -467,7 +467,7 @@ footer {
 /* ===== WELCOME HERO IMAGE MOVEMENT ===== */
 
 .hero {
-    animation: heroImageMove 5s ease-in-out infinite alternate;
+    animation: heroImageMove 4s ease-in-out infinite alternate;
     background-size: cover;
 }
 

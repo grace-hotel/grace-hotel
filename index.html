@@ -663,5 +663,37 @@ function typeText() {
 
 typeText();
 </script>
+    <!-- GALLERY LIGHTBOX -->
+
+<div id="lightbox" class="lightbox">
+    <span class="close-lightbox">&times;</span>
+    <img id="lightbox-img" src="" alt="Gallery Image">
+</div>
+
+<script>
+const galleryImages = document.querySelectorAll(".gallery-grid img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const closeLightbox = document.querySelector(".close-lightbox");
+
+galleryImages.forEach(function(image) {
+    image.addEventListener("click", function() {
+        lightbox.style.display = "flex";
+        lightboxImg.src = image.src;
+    });
+});
+
+closeLightbox.addEventListener("click", function() {
+    lightbox.style.display = "none";
+});
+
+lightbox.addEventListener("click", function(e) {
+    if (e.target === lightbox) {
+        lightbox.style.display = "none";
+    }
+});
+</script>
+
+</body>
 </body>
 </html>

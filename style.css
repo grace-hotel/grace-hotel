@@ -542,3 +542,29 @@ footer {
         background-position: 70% center;
     }
 }
+/* ===== HERO SLIDESHOW ===== */
+
+.hero {
+    animation: heroSlideshow 15s infinite;
+}
+
+@keyframes heroSlideshow {
+
+    0%, 30% {
+        background-image:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url("gracehotel.jpg");
+    }
+
+    33%, 63% {
+        background-image:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url("gracet.jpg");
+    }
+
+    66%, 100% {
+        background-image:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url("food.jpg");
+    }
+}

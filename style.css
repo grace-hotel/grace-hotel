@@ -971,3 +971,32 @@ h2 {
     animation: none !important;
     transform: none !important;
 }
+/* Grace Hotel Logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    display: block;
+}
+
+.logo span {
+    display: inline-block;
+}
+
+@media (max-width: 600px) {
+    .logo img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .logo {
+        gap: 7px;
+    }
+}
